@@ -1,7 +1,8 @@
 package example.demo.springboot.helloworld.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HomeController {

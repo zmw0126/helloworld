@@ -15,7 +15,7 @@ import java.net.URI;
 import static org.springframework.http.HttpStatus.OK;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
+@SpringApplicationConfiguration(classes = DemoApplication.class)
 @WebIntegrationTest(randomPort = true)
 public class HomeControllerTest {
 
