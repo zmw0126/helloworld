@@ -3,11 +3,8 @@ pre_ci_boot:
     image: 10.20.0.6:5000/oracle-java8
     tag: "latest"
 ci:
-    - echo aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     - pwd
-    - env
-    - ls -l /opt/maven/apache-maven-3.5.3/bin/mvn
     - mvn clean
     - mvn package -Dmaven.test.skip=true
-    - cp ../target/helloworld-*.war $ALAUDACI_DEST_DIR
-    - cp ../target/helloworld-*.war $ALAUDACI_UPLOAD_DIR
+    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
+    - cp target/helloworld-*.war $ALAUDACI_UPLOAD_DIR
