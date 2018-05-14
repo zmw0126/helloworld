@@ -5,6 +5,7 @@ pre_ci_boot:
 ci:
     - echo aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     - pwd
+    - env
     - mvn clean
     - mvn package -Dmaven.test.skip=true
     - cp ../target/helloworld-*.war $ALAUDACI_DEST_DIR
