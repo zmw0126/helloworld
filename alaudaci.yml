@@ -7,4 +7,4 @@ ci:
     - mvn clean
     - mvn package -Dmaven.test.skip=true
     - cp target/helloworld-*.war $AUAUDACI_DEST_DIR
-    - cp  Dockerfile  $AUAUDACI_DEST_DIR
+    - cp Dockerfile  $AUAUDACI_DEST_DIR
