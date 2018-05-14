@@ -6,5 +6,5 @@ ci:
     - pwd
     - mvn clean
     - mvn package -Dmaven.test.skip=true
-    - cp target/helloworld-*.war $AUAUDACI_DEST_DIR
-    - cp Dockerfile  $AUAUDACI_DEST_DIR
+    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
+    - cp Dockerfile $ALAUDACI_DEST_DIR
