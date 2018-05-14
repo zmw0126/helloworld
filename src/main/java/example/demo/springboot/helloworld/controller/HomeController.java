@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from Alauda Container Cloud Platform!";
+        return "Hello from Test CI!";
     }
 
 }
