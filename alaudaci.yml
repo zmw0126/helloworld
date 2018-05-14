@@ -3,10 +3,9 @@ pre_ci_boot:
 image: 10.20.0.6:5000/oracle-java8
 tag: "lastest" 
 ci:
-
-   - pwd
-   - cp -fR /pom.xml .
-   - mvn clean
-   - mvn package -Dmaven.test.skip=true
-   - cp ../target/helloworld-*.war $ALAUDACI_DEST_DIR
-   - cp ../target/helloworld-*.war $ALAUDACI_UPLOAD_DIR
+    - pwd
+    - cp -fR /pom.xml .
+    - mvn clean
+    - mvn package -Dmaven.test.skip=true
+    - cp ../target/helloworld-*.war $ALAUDACI_DEST_DIR
+    - cp ../target/helloworld-*.war $ALAUDACI_UPLOAD_DIR
