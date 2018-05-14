@@ -6,7 +6,7 @@ ci:
     - echo aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     - pwd
     - env
-    - ls -l /opt/maven/apache-maven-3.5.3/bin/mnv
+    - ls -l /opt/maven/apache-maven-3.5.3/bin/mvn
     - mvn clean
     - mvn package -Dmaven.test.skip=true
     - cp ../target/helloworld-*.war $ALAUDACI_DEST_DIR
