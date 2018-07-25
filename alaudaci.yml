@@ -1,9 +1,9 @@
 version: "0.1.0" 
 pre_ci_boot: 
-    image: alaudademo01-alaudademo01.customerindex.alauda.cn:5000/project1/maven
-    tag: "3.5.3-jdk-8"
+  image: alaudademo01-alaudademo01.customerindex.alauda.cn:5000/project1/maven
+  tag: "3.5.3-jdk-8"
 ci:
-    - pwd
-    - mvn package -Dmaven.test.skip=true
-    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
-    - cp Dockerfile $ALAUDACI_DEST_DIR
+  - pwd
+  - mvn package -Dmaven.test.skip=true
+  - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
+  - cp Dockerfile $ALAUDACI_DEST_DIR
