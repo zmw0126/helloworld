@@ -4,7 +4,6 @@ pre_ci_boot:
     tag: "3.5.3-jdk-8"
 ci:
     - pwd
-    - mvn clean
     - mvn package -Dmaven.test.skip=true
     - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
     - cp Dockerfile $ALAUDACI_DEST_DIR
