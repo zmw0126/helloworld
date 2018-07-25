@@ -1,10 +1,10 @@
 version: "0.1.0" 
-pre_ci_boot: 
-    image: 10.20.0.6:5000/oracle-java8
-    tag: "latest"
-ci:
-    - pwd
-    - mvn clean
-    - mvn package -Dmaven.test.skip=true
-    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
-    - cp Dockerfile $ALAUDACI_DEST_DIR
+	pre_ci_boot: 
+	    image: maven
+	    tag: "3.5.3-jdk-8"
+	ci:
+	    - pwd
+	    - mvn clean
+	    - mvn package -Dmaven.test.skip=true
+	    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
+	    - cp Dockerfile $ALAUDACI_DEST_DIR
