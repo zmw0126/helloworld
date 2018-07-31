@@ -1,6 +1,6 @@
 version: "0.1.0" 
 pre_ci_boot: 
-    image: alaudademo01-alaudademo01.customerindex.alauda.cn:5000/project1/maven
+    image: maven
     tag: "3.5.4-jdk-8"
 ci:
     - echo "mzqi--------------------------"
