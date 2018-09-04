@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from Test Jenkins!";
+        return "Hello from Test CI/CD!";
     }
 
 }
