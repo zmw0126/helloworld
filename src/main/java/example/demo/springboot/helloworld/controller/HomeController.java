@@ -20,7 +20,7 @@ public class HomeController {
     }
 
     private void highCPU() {
-        for (int i = 0; i < 99999999; i++) {
+        for (int i = 0; i < 10000; i++) {
             accumulate(Integer.MAX_VALUE/2);
         }
     }
