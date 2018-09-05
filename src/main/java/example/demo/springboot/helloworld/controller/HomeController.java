@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        String msg = Hello from Test CI/CD!;
+        String msg = “Hello from Test CI/CD!”;
         System.out.pringln(msg);
         return msg;
     }
@@ -18,6 +18,15 @@ public class HomeController {
     String highcpu() {
         highCPU();
         return "High CPU Test Case!";
+    }
+
+    @RequestMapping("/oom")
+    String oom() {
+        String name = "hello";
+        for (int i = 0; i < 10000000; i++) {
+            name += name;
+        }
+        System.out.println(name);
     }
 
     private void highCPU() {
