@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        long ret = accumulate(Int.max/2);
+        long ret = accumulate(Integer.MAX_VALUE/2);
         System.out.println(ret);
         return "Hello from Test CI/CD!";
     }
