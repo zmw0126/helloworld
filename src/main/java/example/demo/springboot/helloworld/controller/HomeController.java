@@ -9,7 +9,17 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
+        accumulate(Int.max/2);
+        uintmax_t t;
         return "Hello from Test CI/CD!";
+    }
+
+    private uintmax_t accumulate(uintmax_t max) {
+        uintmax_t ret;
+        for(uintmax_t i = 1; i <= max; i++) {
+            ret += i;
+        }
+        return ret;
     }
 
 }
