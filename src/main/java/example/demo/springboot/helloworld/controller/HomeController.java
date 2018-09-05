@@ -14,9 +14,9 @@ public class HomeController {
         return "Hello from Test CI/CD!";
     }
 
-    private uintmax_t accumulate(uintmax_t max) {
-        uintmax_t ret;
-        for(uintmax_t i = 1; i <= max; i++) {
+    private long accumulate(int) max) {
+        long ret;
+        for(long i = 1; i <= max; i++) {
             ret += i;
         }
         return ret;
