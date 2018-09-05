@@ -15,7 +15,7 @@ public class HomeController {
     }
 
     private long accumulate(long max) {
-        long ret;
+        long ret = 0;
         for(long i = 1; i <= max; i++) {
             ret += i;
         }
