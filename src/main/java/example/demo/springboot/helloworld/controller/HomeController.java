@@ -9,11 +9,21 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        long ret = accumulate(Integer.MAX_VALUE/2);
-        System.out.println(ret);
+        
         return "Hello from Test CI/CD!";
     }
 
+    @RequestMapping("/highcpu")
+    String highcpu() {
+        highCPU();
+        return "High CPU Test Case!";
+    }
+
+    private void highCPU() {
+        for (int i = 0; i < 99999999; i++) {
+            accumulate(Integer.MAX_VALUE/2);
+        }
+    }
     private long accumulate(long max) {
         long ret = 0;
         for(long i = 1; i <= max; i++) {
