@@ -9,8 +9,9 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        
-        return "Hello from Test CI/CD!";
+        String msg = Hello from Test CI/CD!;
+        System.out.pringln(msg);
+        return msg;
     }
 
     @RequestMapping("/highcpu")
