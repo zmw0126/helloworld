@@ -22,11 +22,15 @@ public class HomeController {
 
     @RequestMapping("/oom")
     String oom() {
-        String name = "hello";
-        for (int i = 0; i < 10000000; i++) {
-            name += name;
+        try {
+            String name = "hello";
+            for (int i = 0; i < 10000000; i++) {
+                name += name;
+            }
+        } catch(Throwable e) {
+            System.out.println("OOM Error " + e);
+            throw e;
         }
-        System.out.println(name);
     }
 
     private void highCPU() {
