@@ -9,7 +9,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        String msg = “Hello from Test CI/CD!”;
+        String msg = "Hello from Test CI/CD!";
         System.out.pringln(msg);
         return msg;
     }
@@ -29,8 +29,9 @@ public class HomeController {
             }
         } catch(Throwable e) {
             System.out.println("OOM Error " + e);
-            throw e;
+            //throw e;
         }
+        return "OOM Test Case!";
     }
 
     private void highCPU() {
