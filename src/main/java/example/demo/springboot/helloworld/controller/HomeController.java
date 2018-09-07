@@ -9,7 +9,8 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        String msg = "Hello from Test CI/CD!";
+        //from Test CI/CD
+        String msg = "Hello World!";
         System.out.println(msg);
         return msg;
     }
