@@ -1,8 +1,7 @@
 package example.demo.springboot.helloworld.controller;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
@@ -10,7 +9,7 @@ public class HomeController {
     @RequestMapping("/")
     String home() {
         //from Test CI/CD
-        String msg = "Hello from Test CI/CD";
+        String msg = "Hello World!";
         System.out.println(msg);
         return msg;
     }
@@ -24,9 +23,9 @@ public class HomeController {
     @RequestMapping("/oom")
     String oom() {
         try {
-            String name = "hello";
             for (int i = 0; i < 10000000; i++) {
-                name += name;
+                byte[] mem = new byte[1024];
+                mem[0] = 0;
             }
         } catch(Throwable e) {
             System.out.println("OOM Error " + e);
