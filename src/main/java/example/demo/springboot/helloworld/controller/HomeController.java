@@ -14,6 +14,11 @@ public class HomeController {
         return msg;
     }
 
+    @RequestMapping("/health")
+    String health() {
+        return "Is it OK.";
+    }
+
     @RequestMapping("/highcpu")
     String highcpu() {
         highCPU();
