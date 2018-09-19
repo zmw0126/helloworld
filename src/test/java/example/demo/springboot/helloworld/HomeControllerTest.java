@@ -16,7 +16,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = DemoApplication.class, webEnvironment=WebEnvironment.RANDOM_PORT)
-@WebAppConfiguration
 
 public class HomeControllerTest {
 
@@ -29,7 +28,7 @@ public class HomeControllerTest {
     public void helloWorld() {
         getRequest("/")
             .assertStatusCode(OK)
-            .assertResponseBody("Hello from Alauda Container Cloud Platform!");
+            .assertResponseBody("Hello World!");
     }
 
     private HelloWorldResponse getRequest(String uri) {
