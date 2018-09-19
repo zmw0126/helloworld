@@ -16,7 +16,7 @@ public class HomeController {
 
     @RequestMapping("/health")
     String health() {
-        return "Is it OK.";
+        return "status: UP";
     }
 
     @RequestMapping("/highcpu")
