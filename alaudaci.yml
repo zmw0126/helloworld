@@ -1,9 +1,0 @@
-version: "0.1.0" 
-pre_ci_boot: 
-    image: "10.0.0.99:5000/u14java"
-    tag: "oraclejdk8"
-ci:
-    - pwd
-    - mvn -s nexus_settings.xml package -Dmaven.test.skip=true
-    - cp target/helloworld-*.war $ALAUDACI_DEST_DIR
-    - cp Dockerfile $ALAUDACI_DEST_DIR
